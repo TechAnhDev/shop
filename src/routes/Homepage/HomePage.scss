@@ -1,0 +1,46 @@
+@import '~/responsive.scss';
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+  .sidebar {
+    width: 230px;
+  }
+  .content_homepage {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    .product {
+      width: 85%;
+      .slide {
+        width: 100%;
+
+        gap: 20px;
+        display: flex;
+
+        .itemSlide {
+          img {
+            width: 430px;
+            height: 311px;
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+  @include md {
+    .sidebar {
+      flex: 3;
+    }
+    .product {
+      flex: 7;
+    }
+  }
+}
